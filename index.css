@@ -331,7 +331,7 @@
 
 
 
-@media only screen and (min-width: 755px) and (max-width: 959px) {
+@media only screen and (min-width: 740px) and (max-width: 959px) {
 
 	.box-3 .line-1::before {
         border: 1px solid var(--line-color);
@@ -422,7 +422,7 @@
 
 
 
-@media only screen and (min-width: 520px) and (max-width: 754px) {
+@media only screen and (min-width: 520px) and (max-width: 739px) {
 
 	.box-2 .line-1::before {
 	border: 1px solid var(--line-color);
