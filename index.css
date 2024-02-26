@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+
+
+:root {
+	--layout-background: #F0F0F0;
+	--box-background: #FFFFFF;
+	--line-1-background: #F17D7D;
+	--line-2-background: rgba(255, 230, 0, 0.97);
+	--line-3-background: #46EEC6;
+	--box-seperation: 40px;
+	--box-border-radius: 8px;
+	--line-border-radius: 8px;
+	--ball-background: linear-gradient(180deg, rgba(248, 178, 62, 0.984844) 0%, rgba(255, 230, 0, 0.97) 100%);
+	--line-color: #8E8C8C;
+}
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: var(--layout-background);
+	font-family: 'Rubik', sans-serif;
+}
+
+.container{
+    margin: 0 40px;
+    margin-top: 120px;
+    display: flex;
+    flex-wrap:wrap;    
+}
+ .box{
+    height: 180px;
+	width: 180px;
+	margin-right: var(--box-seperation);
+	margin-bottom: 60px;
+	background-color: var(--box-background);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+	border-radius: var(--box-border-radius);
+	position: relative;
+ }
+
+ .box-10 {
+	flex-grow: 1;
+}
+
+.line{
+    margin: 0 8px 0 8px;
+	height: 40px;
+	border-radius: var(--line-border-radius);
+	
+}
+
+
+.line-1 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: var(--line-1-background);
+	font-weight: 600;
+	font-style: normal;
+	font-size: 20px;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.line-2 {
+	background: var(--line-2-background);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10px;
+}
+
+.line-3 {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background: var(--line-3-background);
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.box:nth-child(even) .line-2 {
+	padding: 8px 12px;
+}
+
+.box:nth-child(odd) .line-2 {
+	padding: 14px 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+.box-10 .line-2 {
+	display: flex;
+	align-items: center;
+}
+
+
+.ball::after {
+	content: '';
+	background: var(--ball-background);
+	position: absolute;
+	top: 80px;
+	right: -60px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+}
+
+
+.line-1::before {
+	content: '';
+	border: 1px solid var(--line-color);
+    width: 40px;
+    position: absolute;
+	top: 89px;
+	right: -40px;
+	border-left: none;
+	border-bottom: none;
+	border-right: none;
+}
+
+.line-1::after {
+	content: '';
+	width: 20px;
+	height: 120px;
+	position: absolute;
+	top: -30px;
+	left: -20px;
+}
+
+.line-3::before {
+	content: '';
+	position: absolute;
+	bottom: -30px;
+	right: -20px;
+}
+
+
+@media only screen and (min-width: 1840px) and (max-width: 2060px) {
+    .box-8 .line-1::before {
+        border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+      
+    }
+
+    .box-9 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+    .box-8 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 1760px;
+	}
+}
+
+
+
+
+@media only screen and (min-width: 1620px) and (max-width: 1839px) {
+
+	.box-7 .line-1::before {
+        border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-8 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-7 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 1540px;
+	}
+
+}
+
+
+
+@media only screen and (min-width: 1400px) and (max-width: 1619px) {
+
+	
+	.box-6 .line-1::before {
+        border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-7 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-6 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 1320px;
+	}
+}
+
+
+
+@media only screen and (min-width: 1180px) and (max-width: 1399px) {
+
+	
+	.box-5 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-6 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-5 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 1100px;
+	}
+
+}
+
+
+
+
+@media only screen and (min-width: 960px) and (max-width: 1179px) {
+
+	
+	.box-4 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-8 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-5 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-9 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-right: none;
+	}
+
+	.box-4 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 880px;
+	}
+	.box-8 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 880px;
+	}
+}
+
+
+
+
+@media only screen and (min-width: 755px) and (max-width: 959px) {
+
+	.box-3 .line-1::before {
+        border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-6 .line-1::before {
+        border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-9 .line-1::before {
+        border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-4 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-7 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-10 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+
+	.box-3 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 660px;
+	}
+
+	.box-6 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 660px;
+	}
+
+	.box-9 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 660px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 520px) and (max-width: 754px) {
+
+	.box-2 .line-1::before {
+	border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;	
+	}
+
+	.box-4 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-6 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-8 .line-1::before {
+	border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;	
+	}
+
+	.box-3 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-5 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-7 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-9 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-2 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 440px;
+	}
+	.box-4 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 440px;
+	}
+	.box-6 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 440px;
+	}
+	.box-8 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 440px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 520px) {
+
+	.box-1 .line-1::before {
+	border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-2 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-3 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-4 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-5 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-6 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-7 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	.box-8 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+	
+	.box-9 .line-1::before {
+		border: 1px solid var(--line-color);
+        width: 20px;
+        height:120px;
+        position: absolute;
+	    top: 89px;
+	    right: -21px;
+        border-left: none;
+		border-bottom: none;
+	}
+
+	
+	.box-2 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-3 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-4 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-5 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-6 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-7 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-8 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-9 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	
+	.box-10 .line-1::after {
+		border: 1px solid var(--line-color);
+		border-right: none;
+		border-top: none;
+	}
+
+	.box-1 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-2 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-3 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-4 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-5 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-6 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-7 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-8 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+	.box-9 .line-3::before {
+		border: 1px solid var(--line-color);
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		width: 220px;
+	}
+}
